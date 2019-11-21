@@ -23,8 +23,10 @@ In this project, you will think of a topic, find the data, complete an end-to-en
 
 ## Project Goals
 * Research and analyse data on a topic of interest to you.
-* Apply the statistical techniques we have learned. 
+* Feel free to use additional data to enrich your dataset, maybe using SQL or web scraping.
+* Apply the statistical techniques we have learned, along with techniques from EDA. 
 * Create useful and easily-interpretable plots.
+* Prepare a presentation keeping in mind the finer points of storytelling. 
 * Communicate the results of your analysis clearly, accurately and engagingly. 
 
 <a name="requirements"></a>
@@ -37,7 +39,7 @@ In this project, you will think of a topic, find the data, complete an end-to-en
 <a name="deliverables"></a>
 
 ## Deliverables
-* A notebook with your analysis.
+* All the scripts you used for your analysis.
 * Slides and a 3 minute presentation in the classroom.
 * Repository with your workflow + documentation + code. Even if you are working alone, you need to maintain good practices!
 * A short report including your motivation, methodology and results.
@@ -54,17 +56,18 @@ Your mentor will:
 <a name="schedule"></a>
 
 ## Schedule
-*Thursday-Friday 16:00h*
+*Monday*
 * Think about a topic and propose some questions. 
 * Choose data that is relevant to your questions. 
 * Look for documentation to give context to your project.
 * Write the README file in your repository.
+* Get approval for your project 
 * **DO NOT START CODING**
 
 
 **NO CODE UNTIL HERE**
 
-*Monday-Wednesday*
+*Tuesday - Wednesday*
 * Start importing the data and cleaning it.
 * Start the analysis. Remember all the techniques you have learned!
 * Prepare a draft of your first slides presentation (no analysis or conclusions yet): title, motivation, context, ...
@@ -81,7 +84,6 @@ Your mentor will:
 
 ## Presentation  
 Presentations for this project will be in the classroom! Presentations will be **EXACTLY** 5 minutes long, with 2 additional minutes for questions. We will stop you!  
-After the presentations, the audience will evaluate you by indicating how well they understood what you were trying to present and how you presented it. This information will help you in further presentations!
 
 <a name="tips-&-tricks"></a>
 
