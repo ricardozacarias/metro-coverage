@@ -40,7 +40,7 @@ In this project, you will think of a topic, find the data, complete an end-to-en
 
 ## Deliverables
 * All the scripts you used for your analysis.
-* Slides and a 3 minute presentation in the classroom.
+* Slides and a 5 minute presentation in the classroom.
 * Repository with your workflow + documentation + code. Even if you are working alone, you need to maintain good practices!
 * A short report including your motivation, methodology and results.
 
