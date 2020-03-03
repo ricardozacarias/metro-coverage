@@ -59,8 +59,6 @@ The data required for this project was foraged from many different corners of th
 
 
 
-
-
 Outline the workflow you used in your project. What were the steps you went through?
 
 <a name="organization"></a>
