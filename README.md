@@ -6,13 +6,13 @@
 # Content
 - [Abstract](#Abstract)
 
-- [Introduction](#Introduction)
-
 - [Datasets](#Datasets)
 
-- [Workflow](#workflow)
+- [Introduction](#Introduction)
 
-- [Organization](#organization)
+- [Metrics](#Metrics)
+
+- [Results](#Results)
 
 - [Links](#links)
 
@@ -26,11 +26,6 @@ Statistical and probabilistic quantification of metro systems in different citie
 3. Percentage of metropolitan area covered by metro stations.
 
 Subway systems were subsequently ranked based on these metrics and the difference between them was tested statistically. The location intelligence applications of this project are exemplified by the use of geolocation data for the Portuguese bakery  *A Padaria Portuguesa*. Furthermore, I demonstrate that demographical data can be easily layered on the algorithm. 
-
-
-
-# Introduction
-I wanted to work with public transportation data, but as I was doing research on which were considered to be the best metro systems in the world, it was very difficult to find any article that used quantitative measures. The majority of internet posts rank metro systems based on the design or the cleanliness of its underground stations.  
 
 
 
@@ -59,17 +54,55 @@ The data required for this project was foraged from many different corners of th
 
 
 
-Outline the workflow you used in your project. What were the steps you went through?
+### Dataset Example
 
-<a name="organization"></a>
+*Lisbon Boundaries and Metro Stations*
 
-## Organization
-How did you organize yourself? Did you use any tools?
+<img src="figures/lisbon_points_and_region.png" width="600"/>
 
-<a name="links"></a>
+# Introduction
 
-## Links
-Include the links to your repository, slides and trello. Feel free to include any other links associated to your project. 
+I wanted to work with public transportation data, but as I was doing research on which were considered to be the best metro systems in the world, it was very difficult to find any article that used quantitative measures. The majority of internet posts rank metro systems based on the design or the cleanliness of its underground stations.  So my question was: what makes a subway great?
 
-[Repository](https://github.com/)  
-[Presentation](https://docs.google.com/presentation/d/1oRKBcvwdgk0NgB6PA_mjdPevFzaNbvs_9OuEQee47UI/edit?usp=sharing)  
+I divided this project in two parts:
+
+- First, I wanted to find metric to quantify the quality of the transportation system and;
+- Second, use these metrics to compare between different cities.
+
+
+
+# Metrics
+
+1. **Average distance from a random point to a station.** I generated 5000 random points inside the city limits. For each point, I calculated the distance to every metro station and then took the minimum. This gets you the closest station. After calculating the minimum distance to each point, we obtain a distribution of distances which can be also shown in a heatmap.
+
+   <img src="figures/lisbon_random_points.png" width="400"/>
+
+   <img src="figures/lisbon_distance_histogram.png" width="400"/>
+
+<img src="figures/lisbon_distance_to_point_heatmap.png" width="400"/>
+
+
+
+2. **Number of stations within 1km.** Essentially, I drew a circle of 1km radius around each random point and then counted how many stations you could find. Instead of distance, this metric reveals how many options you have at any point, or what it the probability of being within 1km of 0 stations, 1 station, 2 stations, and so on.
+
+<img src="figures/lisbon_points_inside_heatmap.png" width="400"/>
+
+<img src="figures/lisbon_number_of_points_histogram.png" width="400"/>
+
+3. **Percentage of area covered.** Again, I drew 1km circles but this time around each metro station instead of the random points. Then I calculated the union between all the shapes and finally subtracted it from the total area of the city.
+
+   <img src="figures/lisbon_area_difference_map.png" width="400"/>
+
+# Results
+
+Shown above was the example for Lisbon but I also did this for **New York**, **Paris**, **London** and **Moscow**. 
+
+### Distance to closest station
+
+Regarding my first metric, Paris tops the list with Moscow coming in last. 
+
+<img src="figures/average_distance_all_cities.png" width="400"/>
+
+I confirmed statistical significance between groups by ANOVA (p=0), and then performed a t-test between the closest groups (London-Lisbon, p=0.04). But what is the best metro by number of options?
+
+### Number of stations within 1km
