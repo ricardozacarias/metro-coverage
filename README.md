@@ -95,7 +95,7 @@ I divided this project in two parts:
 
 # Results
 
-Shown above was the example for Lisbon but I also did this for **New York**, **Paris**, **London** and **Moscow**. 
+Shown above was the example for Lisbon but I also did this for **New York**, **Paris**, **London** and **Moscow**. The maps and histograms for these locations can be found in the */figures/* folder.
 
 ### Distance to closest station
 
@@ -125,7 +125,7 @@ According to our metric, Paris has an impressive **~96%** of the city covered. I
 
 
 
-# Applications
+# Location Intelligence
 
 Some interesting things you can accomplish with this analysis is that you are not restricted to public transportation. You can use any points you want. For example, I scraped the location for every shop of A Padaria Portuguesa in Lisbon and ran the same analysis. This could have relevant **location intelligence** applications.
 
@@ -139,3 +139,6 @@ Additionally, **demographic information** can be easily layered on the algorithm
 
 <img src="figures/correlation.png" width="400"/>
 
+
+
+# Conclusions
