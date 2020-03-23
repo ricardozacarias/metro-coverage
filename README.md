@@ -127,7 +127,15 @@ According to our metric, Paris has an impressive **~96%** of the city covered. I
 
 # Applications
 
-Some interesting things you can accomplish with this analysis is that you are not restricted to public transportation. You can use any points you want. To exemplify this, I scraped the location for every shop of A Padaria Portuguesa in Lisbon and ran the same analysis. 
+Some interesting things you can accomplish with this analysis is that you are not restricted to public transportation. You can use any points you want. For example, I scraped the location for every shop of A Padaria Portuguesa in Lisbon and ran the same analysis. This could have relevant **location intelligence** applications.
+
+<img src="figures/logo-padaria.png" width="125"/>
 
 <img src="figures/lisbon_padarias_points_and_region.png" width="400"/>
+
+<img src="figures/lisbon_padarias_distance_to_point_heatmap.png" width="400"/>
+
+Additionally, **demographic information** can be easily layered on the algorithm. 
+
+<img src="figures/correlation.png" width="400"/>
 
