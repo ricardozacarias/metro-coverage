@@ -1,105 +1,75 @@
-<img src="https://bit.ly/2VnXWr2" alt="Ironhack Logo" width="100"/>
-
-# Welcome to Your Own Project!
-This project is completely up to you!
-
-## Content
-- [Project Description](#project-description)
-- [Project Goals](#project-goals)
-- [Requirements](#requirements)
-- [Deliverables](#deliverables)
-- [Mentoring](#mentoring)
-- [Schedule](#schedule)
-- [Presentation](#presentation)
-- [Tips & Tricks](#tips-&-tricks)
-- [Resources](#resources)
-
-<a name="project-description"></a>
-
-## Project Description
-In this project, you will think of a topic, find the data, complete an end-to-end analysis and present the data in multiple ways, all by yourself. First, choose a topic of interest to you and understand what research has already been done in that area. What are some interesting questions that remain? You will then find some data you think could help answer those questions and complete an analysis with relevant visualizations. Last, you will present your findings both in a presentation and a report. 
-
-<a name="project-goals"></a>
-
-## Project Goals
-* Research and analyse data on a topic of interest to you.
-* Feel free to use additional data to enrich your dataset, maybe using SQL or web scraping.
-* Apply the statistical techniques we have learned, along with techniques from EDA. 
-* Create useful and easily-interpretable plots.
-* Prepare a presentation keeping in mind the finer points of storytelling. 
-* Communicate the results of your analysis clearly, accurately and engagingly. 
-
-<a name="requirements"></a>
-
-## Requirements  
-* You must plan your project. That is why creating a Kanban or Trello Board is mandatory. You have a template for Trello [here](https://trello.com/b/YX8EsB2P/project-4-your-own-project).
-* You **CAN'T CODE** until you project is planned.
-* Create a *.gitignore* file and include it in your repository. 
-
-<a name="deliverables"></a>
-
-## Deliverables
-* All the scripts you used for your analysis.
-* Slides and a 5 minute presentation in the classroom.
-* Repository with your workflow + documentation + code. Even if you are working alone, you need to maintain good practices!
-* A short report including your motivation, methodology and results.
-
-<a name="mentoring"></a>
-
-## Mentoring
-One of the TAs will be your mentor!
-Your mentor will:
-* Follow your project in general.
-* Check if you are following the tasks, your blockers, etc
-* Help/support you in specific questions.
-
-<a name="schedule"></a>
-
-## Schedule
-*Monday*
-* Think about a topic and propose some questions. 
-* Choose data that is relevant to your questions. 
-* Look for documentation to give context to your project.
-* Write the README file in your repository.
-* Get approval for your project 
-* **DO NOT START CODING**
+# Quantifying Metro Systems by Coverage and Opportunity
+*Ricardo Zacarias*
 
 
-**NO CODE UNTIL HERE**
 
-*Tuesday - Wednesday*
-* Start importing the data and cleaning it.
-* Start the analysis. Remember all the techniques you have learned!
-* Prepare a draft of your first slides presentation (no analysis or conclusions yet): title, motivation, context, ...
+# Content
+- [Abstract](#Abstract)
 
-*Thursday*
-* Rehearsal. Take the feedback and use it!
-* Finish the analysis. Finish the slides.
-* Final improvements!
+- [Introduction](#Introduction)
 
-*Friday*
-* Presentation!
+- [Datasets](#Datasets)
 
-<a name="presentation"></a>
+- [Workflow](#workflow)
 
-## Presentation  
-Presentations for this project will be in the classroom! Presentations will be **EXACTLY** 5 minutes long, with 2 additional minutes for questions. We will stop you!  
+- [Organization](#organization)
 
-<a name="tips-&-tricks"></a>
+- [Links](#links)
 
-## Tips & Tricks
-* Organize yourself (don't get lost!).
-* Ask for help vs Google is your friend.
-* Define a simple approach first. You never know how the data can betray you ;)
-* Learn about your subject and understand what other research has been done before you.
-* You *can* use data from the projects your partners did in the last weeks. You can't use your own project.
-* Before making a graph, think about what you want to represent.
+  
 
-<a name="resources"></a>
+# Abstract
+Statistical and probabilistic quantification of metro systems in different cities. Created an algorithm to estimate three separate geographical metrics that evaluate the coverage and availability of points of interest within a city:
 
-## Resources
-Here are some data sources that could be interesting to you:  
-* [Explore the Google Trends](http://pages.today/trends4)  
-* [Hans Roslings's vizs](http://b.link/ted52)  
-* [See an analysis about heart diseases](http://b.link/kaggle10)  
-* [Your body's data](http://body.media/ted6)
+1.  Average distance to the closest station from random points within the city the limits;
+2. The number of metro stations within a 1km radius of random points;
+3. Percentage of metropolitan area covered by metro stations.
+
+Subway systems were subsequently ranked based on these metrics and the difference between them was tested statistically. The location intelligence applications of this project are exemplified by the use of geolocation data for the Portuguese bakery  *A Padaria Portuguesa*. Furthermore, I demonstrate that demographical data can be easily layered on the algorithm. 
+
+
+
+# Introduction
+I wanted to work with public transportation data, but as I was doing research on which were considered to be the best metro systems in the world, it was very difficult to find any article that used quantitative measures. The majority of internet posts rank metro systems based on the design or the cleanliness of its underground stations.  
+
+
+
+# Datasets
+The data required for this project was foraged from many different corners of the internet. Here are their locations.
+
+[Lisbon Metro Coordinates](http://dados.cm-lisboa.pt/dataset/estacoes-de-metro) 
+
+[Lisbon Administrative Divisions (Freguesias)](http://geodados.cm-lisboa.pt/datasets/freguesias-2012-1)
+
+[NYC Subway Stations](https://data.cityofnewyork.us/Transportation/Subway-Stations/arq3-7z49)
+
+[NYC Neighborhood Tabulation Areas](https://data.cityofnewyork.us/City-Government/Neighborhood-Tabulation-Areas-NTA-/cpf4-rkhq)
+
+[Paris Arrondissements](https://www.data.gouv.fr/en/datasets/arrondissements-1/)
+
+[Paris Metro Coordinates](https://www.data.gouv.fr/en/datasets/positions-geographiques-des-stations-du-reseau-ratp-ratp/)
+
+[London Statistical Boundaries](https://data.london.gov.uk/dataset/statistical-gis-boundary-files-london)
+
+[London Underground Locations](https://data.london.gov.uk/dataset/tfl-station-locations)
+
+[Administrative Divisions of Moscow](https://www.kaggle.com/jtremoureux/administrative-divisions-of-moscow)
+
+[Moscow Metro Stations](https://en.wikipedia.org/wiki/List_of_Moscow_Metro_stations) - *scraped from Wikipedia.*
+
+
+
+Outline the workflow you used in your project. What were the steps you went through?
+
+<a name="organization"></a>
+
+## Organization
+How did you organize yourself? Did you use any tools?
+
+<a name="links"></a>
+
+## Links
+Include the links to your repository, slides and trello. Feel free to include any other links associated to your project. 
+
+[Repository](https://github.com/)  
+[Presentation](https://docs.google.com/presentation/d/1oRKBcvwdgk0NgB6PA_mjdPevFzaNbvs_9OuEQee47UI/edit?usp=sharing)  
