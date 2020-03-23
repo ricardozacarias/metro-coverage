@@ -138,7 +138,3 @@ Some interesting things you can accomplish with this analysis is that you are no
 Additionally, **demographic information** can be easily layered on the algorithm. 
 
 <img src="figures/correlation.png" width="400"/>
-
-
-
-# Conclusions
