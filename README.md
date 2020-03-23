@@ -105,4 +105,29 @@ Regarding my first metric, Paris tops the list with Moscow coming in last.
 
 I confirmed statistical significance between groups by ANOVA (p=0), and then performed a t-test between the closest groups (London-Lisbon, p=0.04). But what is the best metro by number of options?
 
+
+
 ### Number of stations within 1km
+
+In this next graph, we can see the probability of being within at least 2 metro stations at any point in the city. Again Paris is at the top and Moscow at the bottom.
+
+<img src="figures/probability_of_2.png" width="400"/>
+
+Interestingly, NYC climbed some spots. This result indicates that while average distance to a station in higher in NY, you have a higher probability of finding more than one (more options). 
+
+
+
+### Area Covered
+
+According to our metric, Paris has an impressive **~96%** of the city covered. It is important to note that this effect could be influence by what is considered a metropolitan area for each of these cities. Paris includes only the *arrondisements* while London has both inner and outer output areas.
+
+<img src="figures/area_covered_all_cities.png" width="400"/>
+
+
+
+# Applications
+
+Some interesting things you can accomplish with this analysis is that you are not restricted to public transportation. You can use any points you want. To exemplify this, I scraped the location for every shop of A Padaria Portuguesa in Lisbon and ran the same analysis. 
+
+<img src="figures/lisbon_padarias_points_and_region.png" width="400"/>
+
