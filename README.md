@@ -14,7 +14,9 @@
 
 - [Results](#Results)
 
-- [Links](#links)
+- [Conclusions](#conclusions)
+
+- [Future steps](#future-steps-and-possible-applications)
 
   
 
@@ -58,7 +60,11 @@ The data required for this project was foraged from many different corners of th
 
 *Lisbon Boundaries and Metro Stations*
 
-<img src="figures/lisbon_points_and_region.png" width="600"/>
+<p align="center">
+  <img src="figures/lisbon_points_and_region.png" width="600"/>
+</p>
+
+
 
 # Introduction
 
@@ -75,23 +81,28 @@ I divided this project in two parts:
 
 1. **Average distance from a random point to a station.** I generated 5000 random points inside the city limits. For each point, I calculated the distance to every metro station and then took the minimum. This gets you the closest station. After calculating the minimum distance to each point, we obtain a distribution of distances which can be also shown in a heatmap.
 
-   <img src="figures/lisbon_random_points.png" width="400"/>
 
-   <img src="figures/lisbon_distance_histogram.png" width="400"/>
 
-<img src="figures/lisbon_distance_to_point_heatmap.png" width="400"/>
+<p align="center">
+  <img src="figures/lisbon_random_points.png" width="400"/>
+  <img src="figures/lisbon_distance_histogram.png" width="400"/>
+    <img src="figures/lisbon_distance_to_point_heatmap.png" width="400"/>
+</p>
 
 
 
 2. **Number of stations within 1km.** Essentially, I drew a circle of 1km radius around each random point and then counted how many stations you could find. Instead of distance, this metric reveals how many options you have at any point, or what it the probability of being within 1km of 0 stations, 1 station, 2 stations, and so on.
 
-<img src="figures/lisbon_points_inside_heatmap.png" width="400"/>
-
-<img src="figures/lisbon_number_of_points_histogram.png" width="400"/>
+<p align="center">
+  <img src="figures/lisbon_points_inside_heatmap.png" width="400"/>
+  <img src="figures/lisbon_number_of_points_histogram.png" width="400"/>
+</p>
 
 3. **Percentage of area covered.** Again, I drew 1km circles but this time around each metro station instead of the random points. Then I calculated the union between all the shapes and finally subtracted it from the total area of the city.
 
-   <img src="figures/lisbon_area_difference_map.png" width="400"/>
+   <p align="center">
+     <img src="figures/lisbon_area_difference_map.png" width="400"/>
+   </p>
 
 # Results
 
@@ -101,7 +112,9 @@ Shown above was the example for Lisbon but I also did this for **New York**, **P
 
 Regarding my first metric, Paris tops the list with Moscow coming in last. 
 
-<img src="figures/average_distance_all_cities.png" width="400"/>
+<p align="center">
+  <img src="figures/average_distance_all_cities.png" width="400"/>
+</p>
 
 I confirmed statistical significance between groups by ANOVA (p=0), and then performed a t-test between the closest groups (London-Lisbon, p=0.04). But what is the best metro by number of options?
 
@@ -111,30 +124,47 @@ I confirmed statistical significance between groups by ANOVA (p=0), and then per
 
 In this next graph, we can see the probability of being within at least 2 metro stations at any point in the city. Again Paris is at the top and Moscow at the bottom.
 
-<img src="figures/probability_of_2.png" width="400"/>
+<p align="center">
+  <img src="figures/probability_of_2.png" width="400"/>
+</p>
+
+
 
 Interestingly, NYC climbed some spots. This result indicates that while average distance to a station in higher in NY, you have a higher probability of finding more than one (more options). 
-
-
 
 ### Area Covered
 
 According to our metric, Paris has an impressive **~96%** of the city covered. It is important to note that this effect could be influence by what is considered a metropolitan area for each of these cities. Paris includes only the *arrondisements* while London has both inner and outer output areas.
 
-<img src="figures/area_covered_all_cities.png" width="400"/>
+<p align="center">
+  <img src="figures/area_covered_all_cities.png" width="400"/>
+</p>
 
 
 
 # Location Intelligence
 
-Some interesting things you can accomplish with this analysis is that you are not restricted to public transportation. You can use any points you want. For example, I scraped the location for every shop of A Padaria Portuguesa in Lisbon and ran the same analysis. This could have relevant **location intelligence** applications.
+Some interesting things you can accomplish with this analysis is that you are not restricted to public transportation. You can use any points you want. For example, I scraped the location for every shop of *A Padaria Portuguesa* in Lisbon and ran the same analysis. This could have relevant **location intelligence** applications.
 
-<img src="figures/logo-padaria.png" width="125"/>
+<p align="center">
+  <img src="figures/lisbon_padarias_points_and_region.png" width="350"/>
+    <img src="figures/lisbon_padarias_distance_to_point_heatmap.png" width="350"/>
+</p>
 
-<img src="figures/lisbon_padarias_points_and_region.png" width="400"/>
+Because city-wide data can be divided into its sub regions, **demographic information** can be easily layered on the algorithm. 
 
-<img src="figures/lisbon_padarias_distance_to_point_heatmap.png" width="400"/>
+<p align="center">
+  <img src="figures/correlation.png" width="400"/>
+</p>
 
-Additionally, **demographic information** can be easily layered on the algorithm. 
+# Conclusions
 
-<img src="figures/correlation.png" width="400"/>
+- Paris subway is by far the best one.
+- In NYC, while the average distance to the closest station is high, the probability that you find more than one station is also higher.
+- Some of these measure can be influenced by what each country considers to be a *metropolitan area.*
+
+
+
+# Future steps and possible applications
+
+- Generate random points according to the population density.
