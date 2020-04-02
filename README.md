@@ -1,5 +1,6 @@
 # Quantifying Metro Systems by Coverage and Opportunity
 *Ricardo Zacarias*
+[Presentation (7min)](https://www.youtube.com/watch?v=jR1GFAaH2VI)
 
 
 
